@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfólio Daniel Santos Mota - 16 Anos</title>
+    
     <!-- Carrega o Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
     <!-- Carrega o EmailJS CDN -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
     <style>
         /* Configurações do Tailwind */
         tailwind.config = {
@@ -30,8 +34,7 @@
                 }
             }
         }
-
-
+        
         /* Estilos Base para as Transições de Tema */
         body {
             transition: background-color 0.5s ease, color 0.5s ease;
@@ -39,19 +42,18 @@
             /* Garante o scroll quando o conteúdo é maior que a tela */
             overflow-y: scroll;
         }
-
-
+        
         /* Classes de Tema */
         .light-mode {
             background-color: white;
             color: #7e22ce; /* Roxo principal */
         }
+        
         .dark-mode {
             background-color: #171717; /* Preto/Dark-Gray */
             color: #f97316; /* Laranja principal */
         }
-
-
+        
         /* Estilo da Imagem e Container (Adaptando a sugestão do usuário com Tailwind) */
         .conteiner-img {
             background-color: #ede9fe; /* Cor de fundo adaptada ao tema claro */
@@ -60,11 +62,11 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             transition: background-color 0.5s ease;
         }
+        
         .dark-mode .conteiner-img {
             background-color: #262626; /* Cor de fundo adaptada ao tema escuro */
         }
-
-
+        
         .img-style {
             width: 250px;
             height: 375px;
@@ -74,22 +76,20 @@
             border-color: black;
             transition: border-color 0.3s ease, transform 0.3s ease;
         }
-
-
+        
         .light-mode .img-style {
             border-color: #7e22ce; /* Borda roxa no modo claro */
         }
+        
         .dark-mode .img-style {
             border-color: #f97316; /* Borda laranja no modo escuro */
         }
-
-
+        
         .img-style:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
         }
-
-
+        
         /* Estilos dos Botões de Navegação */
         .nav-btn {
             border-width: 1px;
@@ -101,26 +101,29 @@
             text-decoration: none;
             display: inline-block;
         }
+        
         .light-mode .nav-btn {
             border-color: #7e22ce;
             color: #7e22ce;
         }
+        
         .light-mode .nav-btn:hover {
             background-color: #7e22ce;
             color: white;
             box-shadow: 0 0 10px #a855f7;
         }
+        
         .dark-mode .nav-btn {
             border-color: #f97316;
             color: #f97316;
         }
+        
         .dark-mode .nav-btn:hover {
             background-color: #f97316;
             color: #171717;
             box-shadow: 0 0 10px #f97316;
         }
-
-
+        
         /* Estilos do Modal/Mensagem Box (Substituindo alert()) */
         .message-box {
             position: fixed;
@@ -134,20 +137,22 @@
             transform: translateY(-20px);
             transition: opacity 0.3s ease, transform 0.3s ease;
         }
+        
         .message-box.show {
             opacity: 1;
             transform: translateY(0);
         }
+        
         .light-mode .message-box {
             background-color: #7e22ce;
             color: white;
         }
+        
         .dark-mode .message-box {
             background-color: #f97316;
             color: black;
         }
-
-
+        
         /* Animação de Bolhas Flutuantes (Background) */
         .bubbles-container {
             position: fixed;
@@ -158,8 +163,7 @@
             overflow: hidden;
             z-index: -10;
         }
-
-
+        
         .bubble {
             position: absolute;
             display: block;
@@ -172,8 +176,7 @@
             opacity: 0.1;
             border-radius: 50%;
         }
-
-
+        
         .bubble:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
         .bubble:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
         .bubble:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
@@ -182,33 +185,30 @@
         .bubble:nth-child(6) { left: 75%; width: 110px; height: 110px; animation-delay: 3s; }
         .bubble:nth-child(7) { left: 35%; width: 150px; height: 150px; animation-delay: 7s; }
         .bubble:nth-child(8) { left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
-
-
+        
         @keyframes animate {
             0% { transform: translateY(0) rotate(0deg); opacity: 0.1; border-radius: 50%; }
             100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; }
         }
-
-
+        
         /* Estilos Específicos para a Navegação de Conteúdo (SPA) */
         .content-section {
             display: none;
             animation: fadeIn 0.5s ease-out;
         }
+        
         .content-section.active {
             display: block;
         }
+        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
-
-
 <body class="light-mode font-sans">
-
-
+    
     <!-- Container das Bolhas de Fundo -->
     <div class="bubbles-container text-light-primary dark-mode:text-dark-primary" id="bubbles-container">
         <div class="bubble"></div>
@@ -220,12 +220,10 @@
         <div class="bubble"></div>
         <div class="bubble"></div>
     </div>
-
-
+    
     <!-- Message Box (Substitui o alert()) -->
     <div id="message-box" class="message-box"></div>
-
-
+    
     <!-- Cabeçalho e Navegação -->
     <header class="sticky top-0 z-50 p-4 shadow-lg transition duration-500 light-mode:bg-white dark-mode:bg-dark-secondary">
         <div class="max-w-7xl mx-auto flex justify-between items-center flex-wrap">
@@ -237,7 +235,7 @@
                 <button class="nav-btn" data-section="sobre">Sobre</button>
                 <button class="nav-btn" data-section="manhwas">Manhwas</button>
                 <button class="nav-btn" data-section="contato">Contato</button>
-               
+                
                 <!-- Botão de Modo Claro/Escuro -->
                 <button id="mode-toggle" class="nav-btn p-3 w-12 h-12 flex items-center justify-center ml-4" aria-label="Alternar Modo">
                     <svg id="moon-icon" class="w-6 h-6 light-mode:block dark-mode:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -250,11 +248,9 @@
             </nav>
         </div>
     </header>
-
-
+    
     <main class="max-w-7xl mx-auto p-4 md:p-8">
-
-
+        
         <!-- Seção: Início -->
         <section id="inicio" class="content-section active text-center pt-10">
             <h2 class="text-5xl md:text-7xl font-extrabold mb-8 transition-colors">
@@ -263,8 +259,7 @@
             <p class="text-xl mb-12 light-mode:text-gray-700 dark-mode:text-gray-300">
                 Portfólio Interativo | 16 Anos
             </p>
-
-
+            
             <!-- Foto do Daniel (Placeholder) -->
             <div class="flex justify-center mb-16">
                 <div class="conteiner-img light-mode:bg-light-secondary dark-mode:bg-dark-secondary w-full md:w-3/5">
@@ -275,100 +270,116 @@
                          onerror="this.onerror=null; this.src='https://placehold.co/250x375/666666/ffffff?text=Daniel+Mota'">
                 </div>
             </div>
-
-
+            
             <div class="light-mode:text-gray-600 dark-mode:text-gray-400 max-w-4xl mx-auto text-lg space-y-4">
                 <p>Sou Daniel Santos Mota, um entusiasta de 16 anos, e esta é a minha página pessoal. Você pode explorar minhas paixões e hobbies navegando pelos menus acima!</p>
                 <p>Sou apaixonado por ler manhwas, jogos, animes, filmes e, claro, em cozinhar!</p>
                 <p>Fique à vontade para navegar e, se desejar, me contatar na seção Contato.</p>
             </div>
         </section>
-
-
+        
         <!-- Seção: Sobre -->
         <section id="sobre" class="content-section text-left pt-10 p-4">
             <h2 class="text-4xl font-extrabold mb-8 text-center light-mode:text-light-primary dark-mode:text-dark-primary">
                 Sobre Mim
             </h2>
+            
             <div class="max-w-3xl mx-auto light-mode:text-gray-700 dark-mode:text-gray-300 space-y-6 text-lg p-6 rounded-xl light-mode:bg-light-secondary dark-mode:bg-gray-800 shadow-xl">
-               
                 <h3 class="text-2xl font-bold light-mode:text-light-primary dark-mode:text-dark-primary">Informações Pessoais</h3>
                 <ul class="list-disc list-inside space-y-2 ml-4">
                     <li>Nome Completo: Daniel Santos Mota</li>
                     <li>Idade: 16 Anos</li>
                     <li>Estudos: Cursando o 1° Ano do Ensino Médio no Colégio São José em Vila Velha.</li>
                 </ul>
-
-
+                
                 <h3 class="text-2xl font-bold light-mode:text-light-primary dark-mode:text-dark-primary pt-4">Minhas Paixões (Hobbies)</h3>
                 <p>Sou movido por algumas paixões que adoro explorar no meu dia a dia:</p>
+                
                 <div class="flex flex-wrap gap-4 justify-center">
-                    <span class="px-4 py-2 rounded-full font-semibold light-mode:bg-light-primary/10 light-mode:text-light-primary dark-mode:bg-dark-primary/10 dark-mode:text-dark-primary transition-colors">Ler Manhwas</span>
-                    <span class="px-4 py-2 rounded-full font-semibold light-mode:bg-light-primary/10 light-mode:text-light-primary dark-mode:bg-dark-primary/10 dark-mode:text-dark-primary transition-colors">Jogos</span>
-                    <span class="px-4 py-2 rounded-full font-semibold light-mode:bg-light-primary/10 light-mode:text-light-primary dark-mode:bg-dark-primary/10 dark-mode:text-dark-primary transition-colors">Animes e Filmes</span>
-                    <span class="px-4 py-2 rounded-full font-semibold light-mode:bg-light-primary/10 light-mode:text-light-primary dark-mode:bg-dark-primary/10 dark-mode:text-dark-primary transition-colors">Cozinhar</span>
+                    <!-- Botões que funcionam como pop-ups (levam para páginas externas) -->
+                    <button onclick="window.open('https://www.youtube.com/@ManhwaDoKawa', '_blank')" 
+                            class="px-4 py-2 rounded-full font-semibold light-mode:bg-light-primary/10 light-mode:text-light-primary dark-mode:bg-dark-primary/10 dark-mode:text-dark-primary transition-colors hover:scale-105 cursor-pointer">
+                        Ler Manhwas
+                    </button>
+                    
+                    <button onclick="window.open('https://sololeveling.netmarble.com/pt', '_blank')" 
+                            class="px-4 py-2 rounded-full font-semibold light-mode:bg-light-primary/10 light-mode:text-light-primary dark-mode:bg-dark-primary/10 dark-mode:text-dark-primary transition-colors hover:scale-105 cursor-pointer">
+                        Jogos
+                    </button>
+                    
+                    <button onclick="window.open('https://www.youtube.com/@einerdtv', '_blank')" 
+                            class="px-4 py-2 rounded-full font-semibold light-mode:bg-light-primary/10 light-mode:text-light-primary dark-mode:bg-dark-primary/10 dark-mode:text-dark-primary transition-colors hover:scale-105 cursor-pointer">
+                        Animes e Filmes
+                    </button>
+                    
+                    <button onclick="window.open('https://www.youtube.com/c/GuiadoHambúrguer', '_blank')" 
+                            class="px-4 py-2 rounded-full font-semibold light-mode:bg-light-primary/10 light-mode:text-light-primary dark-mode:bg-dark-primary/10 dark-mode:text-dark-primary transition-colors hover:scale-105 cursor-pointer">
+                        Cozinhar
+                    </button>
                 </div>
             </div>
         </section>
-
-
+        
         <!-- Seção: Manhwas Favoritos -->
         <section id="manhwas" class="content-section text-center pt-10">
             <h2 class="text-4xl font-extrabold mb-8 light-mode:text-light-primary dark-mode:text-dark-primary">
                 Manhwas Favoritos
             </h2>
             <p class="mb-8 light-mode:text-gray-600 dark-mode:text-gray-400">Clique na imagem ou no nome para ser levado(a) ao vídeo de recap no YouTube.</p>
-
-
+            
             <div id="manhwa-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 <!-- Conteúdo será injetado pelo JavaScript -->
             </div>
         </section>
-
-
+        
         <!-- Seção: Contato -->
         <section id="contato" class="content-section pt-10">
             <h2 class="text-4xl font-extrabold mb-8 text-center light-mode:text-light-primary dark-mode:text-dark-primary">
                 Entre em Contato
             </h2>
+            
             <div class="max-w-lg mx-auto light-mode:bg-light-secondary dark-mode:bg-gray-800 p-8 rounded-xl shadow-xl">
                 <p class="mb-6 light-mode:text-gray-700 dark-mode:text-gray-300 text-center">
                     Use o formulário abaixo para enviar uma mensagem diretamente para o e-mail:
                     <a href="mailto:motad0057@gmail.com" class="font-bold underline light-mode:text-light-primary dark-mode:text-dark-primary break-all">motad0057@gmail.com</a>
                 </p>
-
-
+                
                 <form id="contact-form" class="space-y-4">
                     <div>
                         <label for="user_name" class="block text-sm font-medium mb-1 light-mode:text-gray-700 dark-mode:text-gray-300">Seu Nome:</label>
-                        <input type="text" name="user_name" id="user_name" required class="w-full p-3 rounded-lg border light-mode:border-gray-300 dark-mode:border-gray-600 light-mode:bg-white dark-mode:bg-gray-700 light-mode:text-gray-900 dark-mode:text-white focus:outline-none light-mode:focus:ring-light-primary dark-mode:focus:ring-dark-primary focus:ring-2 transition">
+                        <input type="text" name="user_name" id="user_name" required
+                               class="w-full p-3 rounded-lg border light-mode:border-gray-300 dark-mode:border-gray-600 light-mode:bg-white dark-mode:bg-gray-700 light-mode:text-gray-900 dark-mode:text-white focus:outline-none light-mode:focus:ring-light-primary dark-mode:focus:ring-dark-primary focus:ring-2 transition">
                     </div>
+                    
                     <div>
                         <label for="user_email" class="block text-sm font-medium mb-1 light-mode:text-gray-700 dark-mode:text-gray-300">Seu Email:</label>
-                        <input type="email" name="user_email" id="user_email" required class="w-full p-3 rounded-lg border light-mode:border-gray-300 dark-mode:border-gray-600 light-mode:bg-white dark-mode:bg-gray-700 light-mode:text-gray-900 dark-mode:text-white focus:outline-none light-mode:focus:ring-light-primary dark-mode:focus:ring-dark-primary focus:ring-2 transition">
+                        <input type="email" name="user_email" id="user_email" required
+                               class="w-full p-3 rounded-lg border light-mode:border-gray-300 dark-mode:border-gray-600 light-mode:bg-white dark-mode:bg-gray-700 light-mode:text-gray-900 dark-mode:text-white focus:outline-none light-mode:focus:ring-light-primary dark-mode:focus:ring-dark-primary focus:ring-2 transition">
                     </div>
+                    
                     <div>
                         <label for="message" class="block text-sm font-medium mb-1 light-mode:text-gray-700 dark-mode:text-gray-300">Mensagem:</label>
-                        <textarea name="message" id="message" rows="4" required class="w-full p-3 rounded-lg border light-mode:border-gray-300 dark-mode:border-gray-600 light-mode:bg-white dark-mode:bg-gray-700 light-mode:text-gray-900 dark-mode:text-white focus:outline-none light-mode:focus:ring-light-primary dark-mode:focus:ring-dark-primary focus:ring-2 transition"></textarea>
+                        <textarea name="message" id="message" rows="4" required
+                                  class="w-full p-3 rounded-lg border light-mode:border-gray-300 dark-mode:border-gray-600 light-mode:bg-white dark-mode:bg-gray-700 light-mode:text-gray-900 dark-mode:text-white focus:outline-none light-mode:focus:ring-light-primary dark-mode:focus:ring-dark-primary focus:ring-2 transition"></textarea>
                     </div>
+                    
                     <button type="submit" class="w-full py-3 rounded-lg font-bold transition duration-300 light-mode:bg-light-primary light-mode:text-white dark-mode:bg-dark-primary dark-mode:text-gray-900 light-mode:hover:shadow-neon-light dark-mode:hover:shadow-neon-dark">
                         Enviar Mensagem
                     </button>
+                    
                     <p id="loading-text" class="text-center mt-2 light-mode:text-light-primary dark-mode:text-dark-primary hidden">Enviando...</p>
                 </form>
             </div>
         </section>
-
-
     </main>
-
-
+    
     <script>
         // --- 1. CONFIGURAÇÃO E DADOS ---
+        
         const EMAILJS_SERVICE_ID = 'service_xxxxxx'; // Substitua pelo seu Service ID
         const EMAILJS_TEMPLATE_ID = 'template_xxxxxx'; // Substitua pelo seu Template ID
         const EMAILJS_PUBLIC_KEY = 'user_xxxxxx'; // Substitua pelo seu Public Key/User ID
-       
+        
         // Dados dos Manhwas (extraídos do arquivo TCC y2)
         const manhwaData = [
             {
@@ -391,7 +402,7 @@
                 img: "https://i.redd.it/barbarians-adventure-in-a-fantasy-world-if-anyones-read-it-v0-iegu6fpnpgtf1.jpg?width=1215&format=pjpg&auto=webp&s=bb1e65b4c5174aa0f50114fe54dfa2285006bee0",
                 youtube: "https://www.youtube.com/watch?v=Uz02KEo9aGQ"
             },
-             {
+            {
                 title: "Absolute Necromancer",
                 // Usando placeholder, pois a URL de imagem fornecida estava truncada/inválida
                 img: "https://i.pinimg.com/736x/76/6a/19/766a19de5c8a64c92eafbcfa059dfe80.jpg",
@@ -409,33 +420,31 @@
                 img: "https://i.pinimg.com/736x/f9/4c/20/f94c200faab8edacea843d1d9b20b288.jpg",
                 youtube: "https://www.youtube.com/watch?v=LvPxnv6sRpo"
             },
-             {
+            {
                 title: "Pick me Up",
                 // Usando placeholder, pois a URL de imagem fornecida estava truncada/inválida
                 img: "https://i.pinimg.com/1200x/88/02/7f/88027fee6df6c9b929a295f0487e7fd4.jpg",
                 youtube: "https://www.youtube.com/watch?v=oZS3NsHhoSg"
             },
         ];
-
-
+        
         // --- 2. FUNÇÕES DE UTILIDADE ---
-
-
+        
         // Função para exibir mensagens customizadas (Substitui o alert())
         function showMessage(text, isError = false) {
             const msgBox = document.getElementById('message-box');
             msgBox.textContent = text;
-           
+            
             // Define o estilo baseado no sucesso ou erro
             msgBox.classList.remove('light-mode', 'dark-mode');
             const currentMode = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
-           
+            
             if (isError) {
                 // Estilo de erro: fundo vermelho, texto branco
                 msgBox.style.backgroundColor = '#dc2626';
                 msgBox.style.color = 'white';
             } else {
-                 // Estilo normal: usa as cores do tema
+                // Estilo normal: usa as cores do tema
                 if (currentMode === 'dark-mode') {
                     msgBox.style.backgroundColor = '#f97316';
                     msgBox.style.color = '#171717';
@@ -444,25 +453,24 @@
                     msgBox.style.color = 'white';
                 }
             }
-           
+            
             msgBox.classList.add('show');
-           
+            
             // Remove a mensagem após 4 segundos
             setTimeout(() => {
                 msgBox.classList.remove('show');
             }, 4000);
         }
-
-
+        
         // --- 3. LÓGICA DE NAVEGAÇÃO (SPA) ---
+        
         function navigateTo(sectionId) {
             document.querySelectorAll('.content-section').forEach(section => {
                 section.classList.remove('active');
             });
             document.getElementById(sectionId).classList.add('active');
         }
-
-
+        
         document.querySelectorAll('.nav-btn').forEach(button => {
             button.addEventListener('click', (e) => {
                 const section = e.target.getAttribute('data-section');
@@ -471,17 +479,14 @@
                 }
             });
         });
-
-
+        
         // --- 4. LÓGICA DE TEMA (MODO CLARO/ESCURO) ---
-
-
+        
         function applyTheme(isDark) {
             const body = document.body;
             const bubbles = document.getElementById('bubbles-container');
             const navBtns = document.querySelectorAll('.nav-btn');
-
-
+            
             if (isDark) {
                 body.classList.remove('light-mode');
                 body.classList.add('dark-mode');
@@ -496,32 +501,27 @@
                 localStorage.setItem('theme', 'light');
             }
         }
-
-
+        
         // Verifica o tema salvo no localStorage ao carregar
         const savedTheme = localStorage.getItem('theme') || 'light';
         applyTheme(savedTheme === 'dark');
-
-
+        
         document.getElementById('mode-toggle').addEventListener('click', () => {
             const isDark = document.body.classList.contains('dark-mode');
             applyTheme(!isDark);
         });
-
-
+        
         // --- 5. INTEGRAÇÃO EMAILJS (Formulário de Contato) ---
-
-
+        
         // Inicializa o EmailJS
         emailjs.init(EMAILJS_PUBLIC_KEY);
-
-
+        
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
+            
             const loadingText = document.getElementById('loading-text');
             loadingText.classList.remove('hidden');
-
-
+            
             // Parâmetros do template EmailJS. 'to_email' é o destino fixo.
             const templateParams = {
                 to_email: 'motad0057@gmail.com',
@@ -529,8 +529,7 @@
                 from_email: document.getElementById('user_email').value,
                 message: document.getElementById('message').value,
             };
-
-
+            
             emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
                 .then(function(response) {
                     console.log('SUCESSO!', response.status, response.text);
@@ -543,11 +542,9 @@
                     loadingText.classList.add('hidden');
                 });
         });
-
-
+        
         // --- 6. RENDERIZAÇÃO DA SEÇÃO MANHWAS ---
-
-
+        
         function renderManhwas() {
             const grid = document.getElementById('manhwa-grid');
             grid.innerHTML = manhwaData.map(manhwa => `
@@ -565,37 +562,30 @@
                 </div>
             `).join('');
         }
-       
+        
         // --- 7. REQUISITOS DOS PDFS (Eventos JS) ---
-
-
+        
         // Atividade 5 & Desafio (Redimensionamento da Janela e OnLoad)
         function updateWindowInfo() {
             const width = window.innerWidth;
             const height = window.innerHeight;
             console.log(`Dimensões da Janela atualizadas: Largura=${width}px, Altura=${height}px`);
         }
-
-
+        
         window.onload = function() {
-            console.log("-----------------------------------------");
+            console.log("---------------------------------------------");
             console.log("--- BEM-VINDO(A) AO PORTFÓLIO DE DANIEL ---");
             console.log(`Saudação Personalizada: Olá, Daniel Santos Mota!`);
-            console.log("-----------------------------------------");
-
-
+            console.log("---------------------------------------------");
+            
             // Executa a função de informação da tela ao carregar
             updateWindowInfo();
-
-
+            
             // Renderiza a grade de manhwas
             renderManhwas();
         }
-
-
+        
         window.onresize = updateWindowInfo;
-       
     </script>
 </body>
 </html>
-
