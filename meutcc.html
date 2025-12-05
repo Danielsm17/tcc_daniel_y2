@@ -3,41 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< Updated upstream
-    <title>Portfólio de Daniel Santos Mota</title>
-    <!-- Carrega o Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Carrega o EmailJS SDK -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <!-- Configuração do Tailwind para permitir cores customizadas e o tema -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class', // Habilita o modo escuro baseado na classe 'dark' no <html>
-            theme: {
-                extend: {
-                    colors: {
-                        // Cores do Tema Claro (Roxo)
-                        'primary-light': '#7c3aed', // Roxo 600
-                        'secondary-light': '#f3e8ff', // Roxo 100
-                        // Cores do Tema Escuro (Laranja)
-                        'primary-dark': '#fb923c', // Laranja 400
-                        'secondary-dark': '#1f2937', // Cinza Escuro
-                    },
-                    // Animações
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0) translateX(0)' },
-                            '50%': { transform: 'translateY(-20px) translateX(10px)' },
-                        },
-                        float2: {
-                            '0%, 100%': { transform: 'translateY(0) translateX(0)' },
-                            '50%': { transform: 'translateY(-15px) translateX(-15px)' },
-                        }
-                    },
-                    animation: {
-                        'float-bubble': 'float 8s ease-in-out infinite',
-                        'float-bubble-slow': 'float2 10s ease-in-out infinite',
-=======
     <title>Portfólio Daniel Santos Mota - 16 Anos</title>
     <!-- Carrega o Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -61,22 +26,11 @@
                     boxShadow: {
                         'neon-light': '0 0 10px #a855f7, 0 0 20px #a855f7',
                         'neon-dark': '0 0 10px #f97316, 0 0 20px #f97316',
->>>>>>> Stashed changes
                     }
                 }
             }
         }
-<<<<<<< Updated upstream
-    </script>
-    <style>
-        /* Estilos base para transições suaves */
-        * {
-            transition: background-color 0.5s, color 0.5s, border-color 0.5s;
-        }
 
-        /* Estilo da Imagem Customizado (Replicando o CSS do usuário com classes do Tailwind) */
-        .img-style-custom {
-=======
 
         /* Estilos Base para as Transições de Tema */
         body {
@@ -85,6 +39,7 @@
             /* Garante o scroll quando o conteúdo é maior que a tela */
             overflow-y: scroll;
         }
+
 
         /* Classes de Tema */
         .light-mode {
@@ -95,6 +50,7 @@
             background-color: #171717; /* Preto/Dark-Gray */
             color: #f97316; /* Laranja principal */
         }
+
 
         /* Estilo da Imagem e Container (Adaptando a sugestão do usuário com Tailwind) */
         .conteiner-img {
@@ -108,349 +64,17 @@
             background-color: #262626; /* Cor de fundo adaptada ao tema escuro */
         }
 
+
         .img-style {
->>>>>>> Stashed changes
             width: 250px;
             height: 375px;
             object-fit: cover;
             border-radius: 40px;
-<<<<<<< Updated upstream
-            border-width: 5px;
-            border-color: black;
-            transition: all 0.3s ease-in-out;
-        }
-
-        /* Hover da Imagem (Replicando hover:bg-[#480544] e hover:text-[#731565]) */
-        .img-style-custom:hover {
-            background-color: #480544; /* Cor de fundo hover (Dark Purple) */
-            /* A cor da borda será controlada pelo JS para seguir o tema */
-        }
-
-        /* Estilo das Bolhas Flutuantes */
-        .bubble {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            opacity: 0.2;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        /* Cor da borda da imagem no modo claro/escuro */
-        html:not(.dark) .img-style-custom {
-            border-color: black;
-        }
-        html.dark .img-style-custom {
-            border-color: #fb923c; /* Laranja no modo escuro */
-        }
-        
-    </style>
-</head>
-<body class="bg-secondary-light dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen font-sans relative overflow-hidden transition-colors duration-500">
-
-    <!-- Bolhas Flutuantes Animadas -->
-    <div class="bubble bg-primary-light dark:bg-primary-dark animate-float-bubble top-1/4 left-5"></div>
-    <div class="bubble bg-primary-light dark:bg-primary-dark animate-float-bubble-slow top-1/2 right-1/4 w-20 h-20"></div>
-    <div class="bubble bg-primary-light dark:bg-primary-dark animate-float-bubble top-3/4 left-2/3 w-10 h-10"></div>
-    <div class="bubble bg-primary-light dark:bg-primary-dark animate-float-bubble-slow top-1/3 right-5 w-16 h-16"></div>
-
-    <!-- Container principal com z-index para sobrepor as bolhas -->
-    <div class="relative z-10">
-
-        <!-- Barra de Navegação -->
-        <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 shadow-lg dark:shadow-xl transition-colors duration-500">
-            <div class="container mx-auto px-4 py-4 flex justify-between items-center">
-                <h1 class="text-xl font-extrabold text-primary-light dark:text-primary-dark">DANIEL S. MOTA</h1>
-                <nav class="space-x-4 flex items-center">
-                    <a href="#inicio" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium transition-colors duration-300 p-2 rounded-lg">Início</a>
-                    <a href="#sobre" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium transition-colors duration-300 p-2 rounded-lg">Sobre</a>
-                    <a href="#manhwas" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium transition-colors duration-300 p-2 rounded-lg">Manhwas</a>
-                    <a href="#contato" class="nav-link text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark font-medium transition-colors duration-300 p-2 rounded-lg">Contato</a>
-
-                    <!-- Botão de Modo Claro/Escuro -->
-                    <button id="theme-toggle" class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:shadow-lg transition-all duration-300">
-                        <svg id="sun-icon" class="w-6 h-6 text-primary-light dark:text-gray-400 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                        <svg id="moon-icon" class="w-6 h-6 text-primary-dark dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
-                    </button>
-                </nav>
-            </div>
-        </header>
-
-        <main class="container mx-auto px-4 py-8">
-
-            <!-- SEÇÃO 1: INÍCIO -->
-            <section id="inicio" class="min-h-[calc(100vh-80px)] pt-20 flex flex-col items-center justify-center text-center">
-                <div class="mb-10 p-8 sm:p-12 w-full md:w-3/5 rounded-[50px] bg-gray-200 dark:bg-gray-800 shadow-xl dark:shadow-primary-dark/30 transition-colors duration-500">
-                    <!-- Container da Imagem (Replicando .conteiner-img) -->
-                    <div class="flex justify-center mx-auto rounded-[50px]">
-                        <!-- Imagem do Usuário (Replicando .img-style) -->
-                        <img 
-                            src="9fcb54a3-3f8d-425e-b4bb-f218395b2f59" 
-                            alt="Foto de Daniel Santos Mota" 
-                            class="img-style-custom shadow-xl hover:shadow-primary-light/70 dark:hover:shadow-primary-dark/70"
-                            onerror="this.onerror=null; this.src='https://placehold.co/250x375/1e40af/ffffff?text=Sua+Foto+Aqui'"
-                        >
-                    </div>
-                </div>
-
-                <h2 class="text-5xl font-extrabold mb-4 text-primary-light dark:text-primary-dark transition-colors duration-500">
-                    Olá, eu sou Daniel Santos Mota
-                </h2>
-                <p class="text-xl max-w-2xl mb-8 text-gray-700 dark:text-gray-300 transition-colors duration-500">
-                    Bem-vindo ao meu portfólio interativo. Explore minhas paixões por leitura, jogos, animes, filmes e, claro, cozinhar!
-                </p>
-                <a href="#sobre" class="bg-primary-light dark:bg-primary-dark text-white font-bold py-3 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
-                    Saiba Mais Sobre Mim
-                </a>
-            </section>
-
-            <!-- SEÇÃO 2: SOBRE MIM -->
-            <section id="sobre" class="py-20 text-center">
-                <h2 class="text-4xl font-bold mb-10 text-primary-light dark:text-primary-dark border-b-2 pb-2 border-primary-light/50 dark:border-primary-dark/50 transition-colors duration-500">
-                    Sobre Mim
-                </h2>
-                <div class="max-w-4xl mx-auto space-y-6 text-lg text-gray-700 dark:text-gray-300 transition-colors duration-500">
-                    <p>
-                        Tenho <span class="font-bold text-primary-light dark:text-primary-dark">16 Anos</span> e atualmente estou cursando o Ensino Médio. Sou o filho mais novo de uma família grande e adoro passar meu tempo livre explorando novas histórias e mundos.
-                    </p>
-                    <p>
-                        Sou apaixonado por:
-                        <ul class="list-none space-y-2 mt-4 text-left inline-block">
-                            <li class="flex items-center"><span class="text-primary-light dark:text-primary-dark mr-2">📚</span> Ler <span class="font-semibold ml-1">Manhwas</span> e assistir <span class="font-semibold ml-1">Animes</span></li>
-                            <li class="flex items-center"><span class="text-primary-light dark:text-primary-dark mr-2">🎮</span> Jogos e <span class="font-semibold ml-1">Filmes</span></li>
-                            <li class="flex items-center"><span class="text-primary-light dark:text-primary-dark mr-2">🔪</span> <span class="font-semibold ml-1">Cozinhar</span> – uma das minhas maiores alegrias é experimentar na cozinha!</li>
-                        </ul>
-                    </p>
-                    <p class="pt-4">
-                        Abaixo, você pode conferir a lista dos meus Manhwas favoritos e, se quiser trocar uma ideia, me envie uma mensagem!
-                    </p>
-                </div>
-            </section>
-
-            <!-- SEÇÃO 3: MEUS MANHWAS FAVORITOS -->
-            <section id="manhwas" class="py-20 text-center">
-                <h2 class="text-4xl font-bold mb-12 text-primary-light dark:text-primary-dark border-b-2 pb-2 border-primary-light/50 dark:border-primary-dark/50 transition-colors duration-500">
-                    Meus Manhwas Favoritos
-                </h2>
-                <div id="manhwas-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- O conteúdo será gerado dinamicamente pelo JavaScript -->
-                </div>
-            </section>
-
-            <!-- SEÇÃO 4: CONTATO -->
-            <section id="contato" class="py-20 text-center">
-                <h2 class="text-4xl font-bold mb-10 text-primary-light dark:text-primary-dark border-b-2 pb-2 border-primary-light/50 dark:border-primary-dark/50 transition-colors duration-500">
-                    Fale Comigo
-                </h2>
-                <p class="text-lg mb-8 text-gray-700 dark:text-gray-300 max-w-xl mx-auto transition-colors duration-500">
-                    Use o formulário abaixo para me enviar uma mensagem. Estou ansioso para ler o que você tem a dizer!
-                </p>
-
-                <!-- Formulário de Contato -->
-                <form id="contact-form" class="max-w-lg mx-auto p-8 rounded-xl shadow-2xl bg-white dark:bg-gray-800 transition-colors duration-500 border border-gray-200 dark:border-gray-700">
-                    <div class="mb-6">
-                        <input type="text" id="user_name" name="user_name" placeholder="Seu Nome" required class="w-full p-4 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-colors duration-300 text-gray-800 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400">
-                    </div>
-                    <div class="mb-6">
-                        <input type="email" id="user_email" name="user_email" placeholder="Seu E-mail" required class="w-full p-4 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-colors duration-300 text-gray-800 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400">
-                    </div>
-                    <div class="mb-6">
-                        <textarea id="message" name="message" rows="5" placeholder="Sua Mensagem" required class="w-full p-4 rounded-lg bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition-colors duration-300 text-gray-800 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400"></textarea>
-                    </div>
-                    <button type="submit" id="submit-btn" class="w-full bg-primary-light dark:bg-primary-dark text-white font-bold py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-[1.01]">
-                        Enviar Mensagem
-                    </button>
-
-                    <!-- Feedback de Mensagem -->
-                    <div id="form-message" class="mt-4 p-3 rounded-lg hidden text-center font-semibold"></div>
-                </form>
-            </section>
-
-        </main>
-
-        <!-- Modal de Confirmação (Substitui o alert()) -->
-        <div id="custom-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden opacity-0 transition-opacity duration-300">
-            <div class="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-2xl w-full max-w-sm transform scale-95 transition-transform duration-300">
-                <h3 id="modal-title" class="text-xl font-bold mb-4 text-primary-light dark:text-primary-dark">Sucesso!</h3>
-                <p id="modal-text" class="mb-6 text-gray-700 dark:text-gray-200">Mensagem de teste.</p>
-                <button id="modal-close" class="w-full bg-primary-light dark:bg-primary-dark text-white font-bold py-2 rounded-lg hover:opacity-90 transition-opacity">
-                    Fechar
-                </button>
-            </div>
-        </div>
-    </div>
-
-
-    <script>
-        // --- Dados dos Manhwas (Extraídos do TCC y2 (1).docx) ---
-        const manhwasData = [
-            {
-                title: "Solo Max Level Newbie",
-                image: "https://static.wikia.nocookie.net/asurascans/images/d/d9/SMLN.webp/revision/latest/thumbnail/width/360/height/360?cb=20220729091709",
-                youtube: "https://www.youtube.com/watch?v=g9kvDT2uLFU&t=3311s"
-            },
-            {
-                title: "Solo Leveling",
-                image: "https://i0.wp.com/www.otakupt.com/wp-content/uploads/2021/12/Solo-Leveling-fim-1.jpg?resize=383%2C652&ssl=1",
-                youtube: "https://www.youtube.com/watch?v=fAu6fhMBHkM"
-            },
-            {
-                title: "Return of Disaster-Class Hero",
-                image: "https://i.pinimg.com/736x/c6/24/cb/c624cb6d85837858d720e147a36cb06f.jpg",
-                youtube: "https://www.youtube.com/watch?v=6mCKGryC8pk&t=290s"
-            },
-            {
-                title: "A Barbarian's Adventure in a Fantasy World",
-                image: "https://i.redd.it/barbarians-adventure-in-a-fantasy-world-if-anyones-read-it-v0-iegu6fpnpgtf1.jpg?width=1215&format=pjpg&auto=webp&s=bb1e65b4c5174aa0f50114fe54dfa2285006bee0",
-                youtube: "https://www.youtube.com/watch?v=Uz02KEo9aGQ"
-            },
-            {
-                title: "Absolute necromancer",
-                image: "https://placehold.co/360x540/1f2937/d1d5db?text=Absolute+Necromancer", // Placeholder para imagem não encontrada
-                youtube: "https://www.youtube.com/watch?v=Y0OPucZUAgE"
-            }
-        ];
-        
-        // --- Inicialização EmailJS ---
-        // Você precisa substituir 'YOUR_SERVICE_ID' e 'YOUR_TEMPLATE_ID' pelos seus IDs reais do EmailJS.
-        const EMAILJS_SERVICE_ID = 'service_placeholder'; 
-        const EMAILJS_TEMPLATE_ID = 'template_placeholder';
-        const EMAILJS_PUBLIC_KEY = 'public_key_placeholder'; // Sua chave pública
-        
-        try {
-            emailjs.init(EMAILJS_PUBLIC_KEY);
-        } catch (error) {
-            console.warn("EmailJS não foi inicializado. Substitua os placeholders do serviceID/templateID/publicKey. Erro:", error.message);
-        }
-
-
-        // --- Funções Auxiliares ---
-
-        // Função para mostrar o modal customizado (em vez de alert())
-        function showModal(title, message, isError = false) {
-            const modal = document.getElementById('custom-modal');
-            const modalTitle = document.getElementById('modal-title');
-            const modalText = document.getElementById('modal-text');
-            
-            modalTitle.textContent = title;
-            modalText.textContent = message;
-
-            // Define cores baseadas se é erro ou sucesso
-            if (isError) {
-                modalTitle.classList.remove('text-primary-light', 'dark:text-primary-dark');
-                modalTitle.classList.add('text-red-500');
-            } else {
-                modalTitle.classList.add('text-primary-light', 'dark:text-primary-dark');
-                modalTitle.classList.remove('text-red-500');
-            }
-
-            modal.classList.remove('hidden', 'opacity-0');
-            modal.classList.add('flex', 'opacity-100');
-            // Animação de entrada
-            modal.querySelector('div').classList.remove('scale-95');
-            modal.querySelector('div').classList.add('scale-100');
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('custom-modal');
-            // Animação de saída
-            modal.querySelector('div').classList.remove('scale-100');
-            modal.querySelector('div').classList.add('scale-95');
-            modal.classList.add('opacity-0');
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-            }, 300); // Tempo igual à transição CSS
-        }
-
-
-        // --- Lógica do Tema (Modo Claro/Escuro) ---
-        const themeToggle = document.getElementById('theme-toggle');
-        const htmlElement = document.documentElement;
-        const sunIcon = document.getElementById('sun-icon');
-        const moonIcon = document.getElementById('moon-icon');
-
-        function updateThemeIcons(isDark) {
-            if (isDark) {
-                sunIcon.classList.remove('hidden');
-                moonIcon.classList.add('hidden');
-            } else {
-                sunIcon.classList.add('hidden');
-                moonIcon.classList.remove('hidden');
-            }
-        }
-
-        function applyTheme(isDark) {
-            if (isDark) {
-                htmlElement.classList.add('dark');
-                localStorage.setItem('theme', 'dark');
-            } else {
-                htmlElement.classList.remove('dark');
-                localStorage.setItem('theme', 'light');
-            }
-            updateThemeIcons(isDark);
-        }
-
-        // Carregar o tema salvo ou o padrão do sistema
-        const savedTheme = localStorage.getItem('theme');
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        
-        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-            applyTheme(true);
-        } else {
-            applyTheme(false);
-        }
-
-        themeToggle.addEventListener('click', () => {
-            const isDark = htmlElement.classList.contains('dark');
-            applyTheme(!isDark);
-        });
-
-        // --- Lógica de Navegação Suave (Scroll) ---
-        document.querySelectorAll('a.nav-link[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // --- Lógica de Geração da Seção Manhwas ---
-        const manhwasList = document.getElementById('manhwas-list');
-
-        function renderManhwas() {
-            manhwasData.forEach(manhwa => {
-                const card = document.createElement('a');
-                card.href = manhwa.youtube;
-                card.target = "_blank";
-                card.className = 'block bg-white dark:bg-gray-800 p-4 rounded-xl shadow-xl hover:shadow-primary-light/50 dark:hover:shadow-primary-dark/50 transform hover:scale-[1.03] transition-all duration-300 group';
-                
-                // Card do Manhwa
-                card.innerHTML = `
-                    <div class="overflow-hidden rounded-lg mb-4 h-80">
-                        <img 
-                            src="${manhwa.image}" 
-                            alt="Capa de ${manhwa.title}" 
-                            class="w-full h-full object-cover group-hover:opacity-80 transition-opacity duration-300"
-                            onerror="this.onerror=null; this.src='https://placehold.co/360x540/1f2937/d1d5db?text=Capa+Indisponível'"
-                        >
-                    </div>
-                    <h3 class="text-xl font-bold text-primary-light dark:text-primary-dark group-hover:underline">
-                        ${manhwa.title}
-                    </h3>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">
-                        Clique para ver o recap no YouTube
-                    </p>
-                `;
-                manhwasList.appendChild(card);
-            });
-=======
             border: solid 5px;
             border-color: black;
             transition: border-color 0.3s ease, transform 0.3s ease;
         }
+
 
         .light-mode .img-style {
             border-color: #7e22ce; /* Borda roxa no modo claro */
@@ -459,10 +83,12 @@
             border-color: #f97316; /* Borda laranja no modo escuro */
         }
 
+
         .img-style:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
         }
+
 
         /* Estilos dos Botões de Navegação */
         .nav-btn {
@@ -494,6 +120,7 @@
             box-shadow: 0 0 10px #f97316;
         }
 
+
         /* Estilos do Modal/Mensagem Box (Substituindo alert()) */
         .message-box {
             position: fixed;
@@ -520,6 +147,7 @@
             color: black;
         }
 
+
         /* Animação de Bolhas Flutuantes (Background) */
         .bubbles-container {
             position: fixed;
@@ -530,6 +158,7 @@
             overflow: hidden;
             z-index: -10;
         }
+
 
         .bubble {
             position: absolute;
@@ -544,6 +173,7 @@
             border-radius: 50%;
         }
 
+
         .bubble:nth-child(1) { left: 25%; width: 80px; height: 80px; animation-delay: 0s; }
         .bubble:nth-child(2) { left: 10%; width: 20px; height: 20px; animation-delay: 2s; animation-duration: 12s; }
         .bubble:nth-child(3) { left: 70%; width: 20px; height: 20px; animation-delay: 4s; }
@@ -553,10 +183,12 @@
         .bubble:nth-child(7) { left: 35%; width: 150px; height: 150px; animation-delay: 7s; }
         .bubble:nth-child(8) { left: 50%; width: 25px; height: 25px; animation-delay: 15s; animation-duration: 45s; }
 
+
         @keyframes animate {
             0% { transform: translateY(0) rotate(0deg); opacity: 0.1; border-radius: 50%; }
             100% { transform: translateY(-1000px) rotate(720deg); opacity: 0; border-radius: 50%; }
         }
+
 
         /* Estilos Específicos para a Navegação de Conteúdo (SPA) */
         .content-section {
@@ -573,7 +205,9 @@
     </style>
 </head>
 
+
 <body class="light-mode font-sans">
+
 
     <!-- Container das Bolhas de Fundo -->
     <div class="bubbles-container text-light-primary dark-mode:text-dark-primary" id="bubbles-container">
@@ -587,8 +221,10 @@
         <div class="bubble"></div>
     </div>
 
+
     <!-- Message Box (Substitui o alert()) -->
     <div id="message-box" class="message-box"></div>
+
 
     <!-- Cabeçalho e Navegação -->
     <header class="sticky top-0 z-50 p-4 shadow-lg transition duration-500 light-mode:bg-white dark-mode:bg-dark-secondary">
@@ -601,7 +237,7 @@
                 <button class="nav-btn" data-section="sobre">Sobre</button>
                 <button class="nav-btn" data-section="manhwas">Manhwas</button>
                 <button class="nav-btn" data-section="contato">Contato</button>
-                
+               
                 <!-- Botão de Modo Claro/Escuro -->
                 <button id="mode-toggle" class="nav-btn p-3 w-12 h-12 flex items-center justify-center ml-4" aria-label="Alternar Modo">
                     <svg id="moon-icon" class="w-6 h-6 light-mode:block dark-mode:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -615,7 +251,9 @@
         </div>
     </header>
 
+
     <main class="max-w-7xl mx-auto p-4 md:p-8">
+
 
         <!-- Seção: Início -->
         <section id="inicio" class="content-section active text-center pt-10">
@@ -626,23 +264,26 @@
                 Portfólio Interativo | 16 Anos
             </p>
 
+
             <!-- Foto do Daniel (Placeholder) -->
             <div class="flex justify-center mb-16">
                 <div class="conteiner-img light-mode:bg-light-secondary dark-mode:bg-dark-secondary w-full md:w-3/5">
                     <!-- Usando um placeholder com a cor e dimensões solicitadas -->
-                    <img src="https://placehold.co/250x375/666666/ffffff?text=Sua+Foto+Aqui" 
-                         alt="Foto de Perfil de Daniel Santos Mota" 
-                         class="img-style shadow-2xl" 
+                    <img src="https://placehold.co/250x375/666666/ffffff?text=Sua+Foto+Aqui"
+                         alt="Foto de Perfil de Daniel Santos Mota"
+                         class="img-style shadow-2xl"
                          onerror="this.onerror=null; this.src='https://placehold.co/250x375/666666/ffffff?text=Daniel+Mota'">
                 </div>
             </div>
 
+
             <div class="light-mode:text-gray-600 dark-mode:text-gray-400 max-w-4xl mx-auto text-lg space-y-4">
                 <p>Sou Daniel Santos Mota, um entusiasta de 16 anos, e esta é a minha página pessoal. Você pode explorar minhas paixões e hobbies navegando pelos menus acima!</p>
-                <p> Sou apaixonado por ler manhwas, jogos, animes, filmes e, claro, em cozinhar!</p>
+                <p>Sou apaixonado por ler manhwas, jogos, animes, filmes e, claro, em cozinhar!</p>
                 <p>Fique à vontade para navegar e, se desejar, me contatar na seção Contato.</p>
             </div>
         </section>
+
 
         <!-- Seção: Sobre -->
         <section id="sobre" class="content-section text-left pt-10 p-4">
@@ -650,13 +291,14 @@
                 Sobre Mim
             </h2>
             <div class="max-w-3xl mx-auto light-mode:text-gray-700 dark-mode:text-gray-300 space-y-6 text-lg p-6 rounded-xl light-mode:bg-light-secondary dark-mode:bg-gray-800 shadow-xl">
-                
+               
                 <h3 class="text-2xl font-bold light-mode:text-light-primary dark-mode:text-dark-primary">Informações Pessoais</h3>
                 <ul class="list-disc list-inside space-y-2 ml-4">
                     <li>Nome Completo: Daniel Santos Mota</li>
                     <li>Idade: 16 Anos</li>
                     <li>Estudos: Cursando o 1° Ano do Ensino Médio no Colégio São José em Vila Velha.</li>
                 </ul>
+
 
                 <h3 class="text-2xl font-bold light-mode:text-light-primary dark-mode:text-dark-primary pt-4">Minhas Paixões (Hobbies)</h3>
                 <p>Sou movido por algumas paixões que adoro explorar no meu dia a dia:</p>
@@ -669,6 +311,7 @@
             </div>
         </section>
 
+
         <!-- Seção: Manhwas Favoritos -->
         <section id="manhwas" class="content-section text-center pt-10">
             <h2 class="text-4xl font-extrabold mb-8 light-mode:text-light-primary dark-mode:text-dark-primary">
@@ -676,10 +319,12 @@
             </h2>
             <p class="mb-8 light-mode:text-gray-600 dark-mode:text-gray-400">Clique na imagem ou no nome para ser levado(a) ao vídeo de recap no YouTube.</p>
 
+
             <div id="manhwa-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 <!-- Conteúdo será injetado pelo JavaScript -->
             </div>
         </section>
+
 
         <!-- Seção: Contato -->
         <section id="contato" class="content-section pt-10">
@@ -688,9 +333,10 @@
             </h2>
             <div class="max-w-lg mx-auto light-mode:bg-light-secondary dark-mode:bg-gray-800 p-8 rounded-xl shadow-xl">
                 <p class="mb-6 light-mode:text-gray-700 dark-mode:text-gray-300 text-center">
-                    Use o formulário abaixo para enviar uma mensagem diretamente para o e-mail: 
+                    Use o formulário abaixo para enviar uma mensagem diretamente para o e-mail:
                     <a href="mailto:motad0057@gmail.com" class="font-bold underline light-mode:text-light-primary dark-mode:text-dark-primary break-all">motad0057@gmail.com</a>
                 </p>
+
 
                 <form id="contact-form" class="space-y-4">
                     <div>
@@ -713,70 +359,77 @@
             </div>
         </section>
 
+
     </main>
+
 
     <script>
         // --- 1. CONFIGURAÇÃO E DADOS ---
         const EMAILJS_SERVICE_ID = 'service_xxxxxx'; // Substitua pelo seu Service ID
         const EMAILJS_TEMPLATE_ID = 'template_xxxxxx'; // Substitua pelo seu Template ID
         const EMAILJS_PUBLIC_KEY = 'user_xxxxxx'; // Substitua pelo seu Public Key/User ID
-        
+       
         // Dados dos Manhwas (extraídos do arquivo TCC y2)
         const manhwaData = [
-            { 
-                title: "Solo Max Level Newbie", 
-                img: "https://i.pinimg.com/736x/29/7c/c4/297cc4e4baa7aade32373d8043ce8270.jpg", 
-                youtube: "https://www.youtube.com/watch?v=g9kvDT2uLFU&t=3311s" 
+            {
+                title: "Solo Max Level Newbie",
+                img: "https://i.pinimg.com/736x/29/7c/c4/297cc4e4baa7aade32373d8043ce8270.jpg",
+                youtube: "https://www.youtube.com/watch?v=g9kvDT2uLFU&t=3311s"
             },
-            { 
-                title: "Solo Leveling", 
-                img: "https://i0.wp.com/www.otakupt.com/wp-content/uploads/2021/12/Solo-Leveling-fim-1.jpg?resize=383%2C652&ssl=1", 
-                youtube: "https://www.youtube.com/watch?v=fAu6fhMBHkM" 
+            {
+                title: "Solo Leveling",
+                img: "https://i0.wp.com/www.otakupt.com/wp-content/uploads/2021/12/Solo-Leveling-fim-1.jpg?resize=383%2C652&ssl=1",
+                youtube: "https://www.youtube.com/watch?v=fAu6fhMBHkM"
             },
-            { 
-                title: "Return of Disaster-Class Hero", 
-                img: "https://i.pinimg.com/736x/c6/24/cb/c624cb6d85837858d720e147a36cb06f.jpg", 
-                youtube: "https://www.youtube.com/watch?v=6mCKGryC8pk&t=290s" 
+            {
+                title: "Return of Disaster-Class Hero",
+                img: "https://i.pinimg.com/736x/c6/24/cb/c624cb6d85837858d720e147a36cb06f.jpg",
+                youtube: "https://www.youtube.com/watch?v=6mCKGryC8pk&t=290s"
             },
-            { 
-                title: "A Barbarian's Adventure in a Fantasy World", 
-                img: "https://i.redd.it/barbarians-adventure-in-a-fantasy-world-if-anyones-read-it-v0-iegu6fpnpgtf1.jpg?width=1215&format=pjpg&auto=webp&s=bb1e65b4c5174aa0f50114fe54dfa2285006bee0", 
-                youtube: "https://www.youtube.com/watch?v=Uz02KEo9aGQ" 
+            {
+                title: "A Barbarian's Adventure in a Fantasy World",
+                img: "https://i.redd.it/barbarians-adventure-in-a-fantasy-world-if-anyones-read-it-v0-iegu6fpnpgtf1.jpg?width=1215&format=pjpg&auto=webp&s=bb1e65b4c5174aa0f50114fe54dfa2285006bee0",
+                youtube: "https://www.youtube.com/watch?v=Uz02KEo9aGQ"
             },
-             { 
-                title: "Absolute Necromancer", 
+             {
+                title: "Absolute Necromancer",
                 // Usando placeholder, pois a URL de imagem fornecida estava truncada/inválida
-                img: "https://i.pinimg.com/736x/76/6a/19/766a19de5c8a64c92eafbcfa059dfe80.jpg", 
-                youtube: "https://www.youtube.com/watch?v=Y0OPucZUAgE" 
+                img: "https://i.pinimg.com/736x/76/6a/19/766a19de5c8a64c92eafbcfa059dfe80.jpg",
+                youtube: "https://www.youtube.com/watch?v=Y0OPucZUAgE"
             },
             {
                 title: "The World After the Fall",
+                // Usando placeholder, pois a URL de imagem fornecida estava truncada/inválida
                 img: "https://i.pinimg.com/736x/b8/86/c8/b886c88ae27d111b730fe772987e6ad3.jpg",
-                youtube: "https://www.youtube.com/watch?v=n-Xv1qty1ZQ&t=2070s"
+                youtube: "https://www.youtube.com/watch?v=n-Xv1qty1ZQ&t=2479s"
             },
             {
                 title: "Boundless Necromancer",
+                // Usando placeholder, pois a URL de imagem fornecida estava truncada/inválida
                 img: "https://i.pinimg.com/736x/f9/4c/20/f94c200faab8edacea843d1d9b20b288.jpg",
                 youtube: "https://www.youtube.com/watch?v=LvPxnv6sRpo"
             },
-            {
+             {
                 title: "Pick me Up",
+                // Usando placeholder, pois a URL de imagem fornecida estava truncada/inválida
                 img: "https://i.pinimg.com/1200x/88/02/7f/88027fee6df6c9b929a295f0487e7fd4.jpg",
                 youtube: "https://www.youtube.com/watch?v=oZS3NsHhoSg"
-            }
+            },
         ];
 
+
         // --- 2. FUNÇÕES DE UTILIDADE ---
+
 
         // Função para exibir mensagens customizadas (Substitui o alert())
         function showMessage(text, isError = false) {
             const msgBox = document.getElementById('message-box');
             msgBox.textContent = text;
-            
+           
             // Define o estilo baseado no sucesso ou erro
             msgBox.classList.remove('light-mode', 'dark-mode');
             const currentMode = document.body.classList.contains('dark-mode') ? 'dark-mode' : 'light-mode';
-            
+           
             if (isError) {
                 // Estilo de erro: fundo vermelho, texto branco
                 msgBox.style.backgroundColor = '#dc2626';
@@ -791,14 +444,15 @@
                     msgBox.style.color = 'white';
                 }
             }
-            
+           
             msgBox.classList.add('show');
-            
+           
             // Remove a mensagem após 4 segundos
             setTimeout(() => {
                 msgBox.classList.remove('show');
             }, 4000);
         }
+
 
         // --- 3. LÓGICA DE NAVEGAÇÃO (SPA) ---
         function navigateTo(sectionId) {
@@ -807,6 +461,7 @@
             });
             document.getElementById(sectionId).classList.add('active');
         }
+
 
         document.querySelectorAll('.nav-btn').forEach(button => {
             button.addEventListener('click', (e) => {
@@ -817,12 +472,15 @@
             });
         });
 
+
         // --- 4. LÓGICA DE TEMA (MODO CLARO/ESCURO) ---
+
 
         function applyTheme(isDark) {
             const body = document.body;
             const bubbles = document.getElementById('bubbles-container');
             const navBtns = document.querySelectorAll('.nav-btn');
+
 
             if (isDark) {
                 body.classList.remove('light-mode');
@@ -839,24 +497,30 @@
             }
         }
 
+
         // Verifica o tema salvo no localStorage ao carregar
         const savedTheme = localStorage.getItem('theme') || 'light';
         applyTheme(savedTheme === 'dark');
+
 
         document.getElementById('mode-toggle').addEventListener('click', () => {
             const isDark = document.body.classList.contains('dark-mode');
             applyTheme(!isDark);
         });
 
+
         // --- 5. INTEGRAÇÃO EMAILJS (Formulário de Contato) ---
+
 
         // Inicializa o EmailJS
         emailjs.init(EMAILJS_PUBLIC_KEY);
+
 
         document.getElementById('contact-form').addEventListener('submit', function(event) {
             event.preventDefault();
             const loadingText = document.getElementById('loading-text');
             loadingText.classList.remove('hidden');
+
 
             // Parâmetros do template EmailJS. 'to_email' é o destino fixo.
             const templateParams = {
@@ -865,6 +529,7 @@
                 from_email: document.getElementById('user_email').value,
                 message: document.getElementById('message').value,
             };
+
 
             emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
                 .then(function(response) {
@@ -879,7 +544,9 @@
                 });
         });
 
+
         // --- 6. RENDERIZAÇÃO DA SEÇÃO MANHWAS ---
+
 
         function renderManhwas() {
             const grid = document.getElementById('manhwa-grid');
@@ -887,8 +554,8 @@
                 <div class="p-4 rounded-xl shadow-lg light-mode:bg-light-secondary dark-mode:bg-gray-800 transition duration-300 hover:scale-[1.02] light-mode:hover:shadow-neon-light dark-mode:hover:shadow-neon-dark cursor-pointer"
                      onclick="window.open('${manhwa.youtube}', '_blank')">
                     <a href="${manhwa.youtube}" target="_blank" class="block">
-                        <img src="${manhwa.img}" 
-                             alt="Capa do Manhwa ${manhwa.title}" 
+                        <img src="${manhwa.img}"
+                             alt="Capa do Manhwa ${manhwa.title}"
                              class="w-full h-80 object-cover rounded-xl mb-4 border-2 light-mode:border-light-primary dark-mode:border-dark-primary transition-colors"
                              onerror="this.onerror=null; this.src='https://placehold.co/300x450/333/ffffff?text=${manhwa.title.replace(/\s/g, '+')}'">
                         <h3 class="text-xl font-bold light-mode:text-light-primary dark-mode:text-dark-primary transition-colors hover:underline">
@@ -898,16 +565,17 @@
                 </div>
             `).join('');
         }
-        
+       
         // --- 7. REQUISITOS DOS PDFS (Eventos JS) ---
+
 
         // Atividade 5 & Desafio (Redimensionamento da Janela e OnLoad)
         function updateWindowInfo() {
             const width = window.innerWidth;
             const height = window.innerHeight;
             console.log(`Dimensões da Janela atualizadas: Largura=${width}px, Altura=${height}px`);
->>>>>>> Stashed changes
         }
+
 
         window.onload = function() {
             console.log("-----------------------------------------");
@@ -915,70 +583,19 @@
             console.log(`Saudação Personalizada: Olá, Daniel Santos Mota!`);
             console.log("-----------------------------------------");
 
+
             // Executa a função de informação da tela ao carregar
             updateWindowInfo();
+
 
             // Renderiza a grade de manhwas
             renderManhwas();
         }
 
+
         window.onresize = updateWindowInfo;
-        
-<<<<<<< Updated upstream
-        // --- Lógica do Formulário de Contato (EmailJS) ---
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            const submitBtn = document.getElementById('submit-btn');
-            const formMessage = document.getElementById('form-message');
-            
-            submitBtn.textContent = 'Enviando...';
-            submitBtn.disabled = true;
-
-            const templateParams = {
-                user_name: document.getElementById('user_name').value,
-                user_email: document.getElementById('user_email').value,
-                message: document.getElementById('message').value,
-                to_email: 'motad0057@gmail.com' // E-mail de destino fixo
-            };
-
-            emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams, EMAILJS_PUBLIC_KEY)
-                .then(function(response) {
-                    submitBtn.textContent = 'Enviar Mensagem';
-                    submitBtn.disabled = false;
-                    document.getElementById('contact-form').reset();
-                    
-                    showModal('Mensagem Enviada!', 'Sua mensagem foi enviada com sucesso para motad0057@gmail.com. Responderei em breve!');
-                    
-                    formMessage.textContent = 'Mensagem enviada com sucesso!';
-                    formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700', 'dark:bg-red-900', 'dark:text-red-200');
-                    formMessage.classList.add('bg-green-100', 'text-green-700', 'dark:bg-green-900', 'dark:text-green-200');
-                    setTimeout(() => formMessage.classList.add('hidden'), 5000);
-
-                }, function(error) {
-                    submitBtn.textContent = 'Enviar Mensagem';
-                    submitBtn.disabled = false;
-                    
-                    // Exibe o erro no modal e console
-                    console.error('Falha ao enviar e-mail:', error);
-                    showModal('Erro ao Enviar!', 'Ocorreu um erro ao tentar enviar a mensagem. Por favor, tente novamente mais tarde ou verifique os IDs do EmailJS. Erro: ' + error.text, true);
-
-                    formMessage.textContent = 'Falha ao enviar. Verifique o console para mais detalhes.';
-                    formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700', 'dark:bg-green-900', 'dark:text-green-200');
-                    formMessage.classList.add('bg-red-100', 'text-red-700', 'dark:bg-red-900', 'dark:text-red-200');
-                    setTimeout(() => formMessage.classList.add('hidden'), 5000);
-                });
-        });
-
-        // Evento para fechar o modal
-        document.getElementById('modal-close').addEventListener('click', closeModal);
-
-        // Inicializa a renderização dos manhwas quando o DOM estiver pronto
-        document.addEventListener('DOMContentLoaded', () => {
-            renderManhwas();
-        });
-=======
->>>>>>> Stashed changes
+       
     </script>
 </body>
 </html>
+
